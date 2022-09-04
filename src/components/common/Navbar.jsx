@@ -1,7 +1,7 @@
 // import {logo} from './src/components/Navbar.js'
 const Navbar = () => {
     return (
-        <h1>Name of the App, maybe phone number, and login optional</h1>
+        <h1>Logo / Your-o-planner / +1 561-900-8952 or conctact us / and login optional</h1>
     )
 }
  

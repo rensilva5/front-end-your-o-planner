@@ -1,7 +1,7 @@
-// import react from "react";
 import { useEffect, useState } from "react";
+// Maybe country Cards instead of DestinationCards below.
 import DestinationCards from "./DestinationCards";
-
+// it also needs pictures of the countries.
 const Main = () => {
   const [destinationList, setDestinationList] = useState([])
   useEffect(() => {

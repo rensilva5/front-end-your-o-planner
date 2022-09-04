@@ -1,4 +1,6 @@
 import { Card } from "antd"
+//It needs pictures per destination, summary, and a button,
+// so the user can drop a review.
 
 export default function DestinationCards ({place}) {
     const handleDestination = () => {

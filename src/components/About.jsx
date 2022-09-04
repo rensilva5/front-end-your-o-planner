@@ -1,6 +1,6 @@
 import Navbar from "./common/Navbar"
 import Footer from "./common/Footer"
-
+// Double check if I need this component at all.
 export default function About () {
     return (
         
