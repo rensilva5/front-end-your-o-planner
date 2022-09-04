@@ -14,6 +14,7 @@ const Main = () => {
     return <h2>Main, add pictures of countries here</h2>;
   }
   return (
+    
     <ul>
       {destinationList.map((place) => (
         <ul key={place.id}>

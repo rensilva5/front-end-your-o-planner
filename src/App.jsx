@@ -4,6 +4,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
 import About from './components/About.jsx'
+import DestinationPage from './pages/DestinationPage.jsx';
 import 'antd/dist/antd.css';
 import './App.css';
 
@@ -15,11 +16,11 @@ export default function App() {
         <Routes>
           <Route path="/home" element={<HomePage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/destination/:destinationId" element={<DestinationPage />} />
+          {/* <Route path="/destination/:destinationId" element={<DestinationPage destinationId={destinationId} />} /> */}
         </Routes>
         
       </BrowserRouter>
     </div>
   );
 }
-
-
