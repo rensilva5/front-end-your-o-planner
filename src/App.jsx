@@ -15,7 +15,7 @@ export default function App() {
       <BrowserRouter>
       
         <Routes>
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/destination/:destinationId" element={<DestinationPage />} />
           <Route path='/country/:countryId' element={ <CountryPage/> } />
