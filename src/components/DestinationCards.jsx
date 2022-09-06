@@ -3,6 +3,13 @@ import { Card } from "antd"
 // so the user can drop a review.
 
 export default function DestinationCards ({place}) {
+    onst [destinationList, setDestinationList] = useState([]);
+  useEffect(() => {
+    fetch("https://deploy-api-your-o-planner.web.app/destinations")
+      .then((result) => result.json())
+      .then((data) => setDestinationList(data)) //
+      .catch(console.error);
+  }, []);
     const handleDestination = () => {
         // todo navigate to destination page
     }
@@ -12,7 +19,7 @@ export default function DestinationCards ({place}) {
                 <p>Hi, this is my first card</p>
                 <div>
                     <button onClick={ handleDestination }></button>
-                    { place.destination }
+                    {place.country}
                 </div>
             </Card>
         </>
