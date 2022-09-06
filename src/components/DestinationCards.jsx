@@ -3,7 +3,7 @@ import { Card } from "antd"
 // so the user can drop a review.
 
 export default function DestinationCards ({place}) {
-    onst [destinationList, setDestinationList] = useState([]);
+    const [destinationList, setDestinationList] = useState([]);
   useEffect(() => {
     fetch("https://deploy-api-your-o-planner.web.app/destinations")
       .then((result) => result.json())
