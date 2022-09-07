@@ -1,51 +1,54 @@
 import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { TravelerChoiceContext } from "../context/TravelerChoiceContext";
+
 // import { Card } from 'antd'
 
+//-//Products
+
 export default function CountryCards({ country }) {
-  const { setBestfor, setCountry } = useContext(TravelerChoiceContext);
+  const { countryChoice, setCountryChoice } = useContext(TravelerChoiceContext);
+
   let navigate = useNavigate();
 
-  const onClickFrance = () => {
-    setBestfor("france");
-    setCountry("france");
-    navigate("/destinations");
-  };
+  //   const onClickFrance = () => {
+  //     setCountry("france");
+  //     navigate("/destinations");
+  //   };
 
-  const onClickGermany = () => {
-    setBestfor("germany");
-    setCountry("germany");
-    navigate("/destinations");
-  };
+  //   const onClickGermany = () => {
+  //     setCountry("germany");
+  //     navigate("/destinations");
+  //   };
 
-  const onClickGreece = () => {
-    setBestfor("greece");
-    setCountry("greece");
-    navigate("/destinations");
-  };
+  //   const onClickGreece = () => {
+  //     setCountry("greece");
+  //     navigate("/destinations");
+  //   };
 
+  // };
+  // const onClickItaly = () => {
+  //   setCountry("italy");
+  //   navigate("/destinations");
+  // };
+
+  // const onClickSpain = () => {
+  //   setCountry("spain");
+  //   navigate("/destinations");
+  // };
+
+  // const onClickUnitedKingdom = () => {
+  //   setCountry("unitedKingdom");
+  //   navigate("/destinations");
+  // };
   const onClick = (id) => {
+    setCountryChoice(id);
+    console.log({id});
+
     navigate(`/country/${id}`);
   };
-  const onClickItaly = () => {
-    setBestfor("italy");
-    setCountry("italy");
-    navigate("/destinations");
-  };
 
-  const onClickSpain = () => {
-    setBestfor("spain");
-    setCountry("spain");
-    navigate("/destinations");
-  };
-
-  const onClickUnitedKingdom = () => {
-    setBestfor("unitedKingdom");
-    setCountry("unitedKingdom");
-    navigate("/destinations");
-  };
 
   return (
     <>
