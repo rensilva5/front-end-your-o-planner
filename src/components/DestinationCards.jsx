@@ -1,32 +1,19 @@
 import { Badge, Button, Card, Group, Image, Text } from "@mantine/core";
-// import { Card } from "antd";
-import { DescriptionsContext } from "antd/lib/descriptions";
-import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { DescriptionsContext } from "antd/lib/descriptions";
+import { useContext, useState } from "react";  // Not using it yet
+// import { useNavigate } from "react-router-dom";
 
-// import { TravelerChoiceContext } from "../context/TravelerChoiceContext";
-//It needs pictures per destination, summary, and a button,
-// so the user can drop a review.
+// Button and link, so the user can drop a review.
 
-// export default function DestinationCards ({place}) {
 export default function DestinationCards({ place }) {
-  const [destinationList, setDestinationList] = useState([]);
+  const [destinationList, setDestinationList] = useState([]);  // I am not using it
 //   const { destination, setDestinations } = useContext(DescriptionsContext);
   
-//   let navigate = useNavigate();
-
-//--// Using this Fetch in CountryMain Instead
-//   useEffect(() => {
-//     fetch("https://deploy-api-your-o-planner.web.app/destinations")
-//       .then((result) => result.json())
-//       .then((data) => {
-//         //setDestinationList(data)
-        //   console.log('this is', choiceDestination)
-        // const destinations = data.filter(
-        //   (dest) => dest.choiceDestination === choiceDestination
-        // );
-        //   setDestinations(destinations)
-    //   })
+    // const destinations = data.filter(
+    //   (dest) => dest.choiceDestination === choiceDestination
+    // );
+    //   setDestinations(destinations)
+    // })
     //   .catch(console.error);
 //   }, []);
 //   const handleDestination = () => {

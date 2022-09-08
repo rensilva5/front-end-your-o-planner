@@ -3,8 +3,6 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { TravelerChoiceContext } from "../context/TravelerChoiceContext";
 
-// import { Card } from 'antd'
-
 //-//Products
 
 export default function CountryCards({ country }) {
