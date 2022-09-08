@@ -9,7 +9,7 @@ const Main = () => {
   useEffect(() => {
     fetch("https://deploy-api-your-o-planner.web.app/countries")
       .then((result) => result.json())
-      .then((data) => setCountryList(data)) //
+      .then((data) => setCountryList(data))
       .catch(console.error);
   }, []);
   

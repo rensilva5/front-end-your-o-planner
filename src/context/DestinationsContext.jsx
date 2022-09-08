@@ -1,15 +1,14 @@
 import { createContext, useState } from "react"
 
-export const DestinationContext = createContext
+export const DestinationsContext = createContext()
 
 export function DestinationContextProvider({ children }) {
-    const { Provider } = DestinationContext
-    const [destinations, setDestinations] = useState
+    const { Provider } = DestinationsContext
+    const [place, setPlace] = useState()
 
     const value = {
-        destinations,
-        setDestinations,
+        place,
+        setPlace,
     }
+    return <Provider value={value}>{children}</Provider>
 }
-
-return <Provider value={value}>{children}</Provider>
