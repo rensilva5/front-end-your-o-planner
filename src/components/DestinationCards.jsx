@@ -71,3 +71,9 @@ export default function DestinationCards({ place }) {
     </>
   );
 }
+
+
+// Forms / controlled input
+
+
+
