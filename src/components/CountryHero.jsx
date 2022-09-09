@@ -9,15 +9,18 @@ const CountryHero = ({countryId}) => {
   return (
     <>
       <h1>Country Hero</h1>
-      {/* <Card.Section>
+      <Card.Section>
           <Image
-            src={country.photoUrl}  //countryChoice ???
+            // src={country.photoUrl}
+            // src={countryChoice.photoUrl}
             height={160}
             width={200}
-            alt={country.id}        //countryChoice ???
+            // alt={country.id}
+            // alt={countryChoice.id}
+            
           />
-        </Card.Section> */}
-      {/* <Image src={countryChoice.photoUrl} height={160} width={200} alt={countryChoice.id} /> */}
+        </Card.Section>
+      <Image src={countryChoice.photoUrl} height={160} width={200} alt={countryChoice.id} />
     </>
   );
 };

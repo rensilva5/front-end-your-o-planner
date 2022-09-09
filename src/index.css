@@ -76,3 +76,9 @@ video {
   flex-direction: column;
   align-items: center;
 }
+
+.next-destination {
+  align-content: center;
+  justify-items: center;
+  padding-left: 15px;
+}

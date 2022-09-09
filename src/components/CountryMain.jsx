@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import DestinationCards from "./DestinationCards";
 import { Modal, Button, Group } from "@mantine/core";
 import ReviewsComponent from "./ReviewsComponent";
+import AddReviewForm from "./AddReviewForm";
 
 const CountryMain = ({ countryId }) => {
-  // To work later--
   const [placeList, setPlaceList] = useState([]);
   const [opened, setOpened] = useState(false);
 
@@ -32,6 +32,15 @@ const CountryMain = ({ countryId }) => {
           ))}
         </Grid>
       </Container>
+
+     <Modal
+        // opened={opened}
+        // onClose={() => setOpened(false)}
+        // title="Add a review"
+      >
+        <AddReviewForm />
+      </Modal>
+
       <Modal
         opened={opened}
         onClose={() => setOpened(false)}
@@ -39,6 +48,7 @@ const CountryMain = ({ countryId }) => {
       >
         <ReviewsComponent />
       </Modal>
+
     </>
   );
   //     const { destinations, setDestinations } = useContext(DescriptionsContext);

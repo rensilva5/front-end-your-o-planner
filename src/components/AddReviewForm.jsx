@@ -1,4 +1,6 @@
-const Form = () => {
+
+
+const AddReviewForm = () => {
     return (
         <div className="Form">
             <h1>Add review</h1>
@@ -19,4 +21,4 @@ const Form = () => {
     );
 }
  
-export default Form
+export default AddReviewForm
