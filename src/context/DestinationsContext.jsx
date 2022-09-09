@@ -4,7 +4,7 @@ export const DestinationsContext = createContext()
 
 export function DestinationContextProvider({ children }) {
     const { Provider } = DestinationsContext
-    const [destination, setDestination] = useState()
+    const [destination, setDestination] = useState([])
 
     const value = {
         destination,

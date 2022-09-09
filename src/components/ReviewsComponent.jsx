@@ -3,9 +3,18 @@ import { DestinationsContext } from "../context/DestinationsContext";
 
 const ReviewsComponent = () => {
   const { destination, setDestination } = useContext(DestinationsContext);
-  const [reviews, setReviews] = useState();
+  //   const [reviews, setReviews] = useState();
   console.log({ destination });
-  return <p>{destination}</p>;
+
+  return (
+    <>
+      <div>
+        {destination.reviews.map((reviewItems, index) => (
+          <p key={index}>{reviewItems}</p>
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default ReviewsComponent;
