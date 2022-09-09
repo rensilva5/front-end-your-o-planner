@@ -12,11 +12,13 @@ import Navbar from "./components/common/Navbar.jsx";
 import Footer from "./components/common/Footer.jsx";
 import { MantineProvider } from "@mantine/core";
 import { TravelerChoiceContextProvider } from "./context/TravelerChoiceContext.jsx";
+import { DestinationContextProvider } from "./context/DestinationsContext.jsx";
 
 export default function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
       <TravelerChoiceContextProvider>
+      <DestinationContextProvider>
         <BrowserRouter>
           <Navbar />
           <Routes>
@@ -28,6 +30,7 @@ export default function App() {
           </Routes>
           <Footer />
         </BrowserRouter>
+        </DestinationContextProvider>
       </TravelerChoiceContextProvider>
     </MantineProvider>
   );

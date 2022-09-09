@@ -1,6 +1,6 @@
-const Create = () => {
+const Form = () => {
     return (
-        <div className="create">
+        <div className="Form">
             <h1>Add review</h1>
             <form>
                 <label>Add review</label>
@@ -19,4 +19,4 @@ const Create = () => {
     );
 }
  
-export default Create
+export default Form

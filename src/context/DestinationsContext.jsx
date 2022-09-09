@@ -4,11 +4,11 @@ export const DestinationsContext = createContext()
 
 export function DestinationContextProvider({ children }) {
     const { Provider } = DestinationsContext
-    const [place, setPlace] = useState()
+    const [destination, setDestination] = useState()
 
     const value = {
-        place,
-        setPlace,
+        destination,
+        setDestination,
     }
     return <Provider value={value}>{children}</Provider>
 }

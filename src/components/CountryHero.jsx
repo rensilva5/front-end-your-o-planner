@@ -2,8 +2,9 @@ import { Card, Image } from "@mantine/core";
 import { useContext } from "react";
 import { TravelerChoiceContext } from "../context/TravelerChoiceContext";
 
-const CountryHero = () => {
+const CountryHero = ({countryId}) => {
     const { countryChoice, setCountryChoice } = useContext(TravelerChoiceContext);
+    // use params
   
   return (
     <>

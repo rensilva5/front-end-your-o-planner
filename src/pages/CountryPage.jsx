@@ -4,14 +4,16 @@
 
 import CountryHero from "../components/CountryHero";
 import CountryMain from "../components/CountryMain";
+import { useParams } from "react-router-dom";
 // import DestinationCards from "../components/DestinationCards";
 
 const CountryPage = () => {
+    const { countryId } = useParams()
     return ( 
         <div>
-            <CountryHero />
+            <CountryHero countryId = {countryId}/>
             {/* <DestinationCards /> */}
-            <CountryMain />
+            <CountryMain countryId = {countryId}/>
         </div>
      )
 }
