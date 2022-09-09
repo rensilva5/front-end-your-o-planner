@@ -11,10 +11,10 @@ const CountryHero = ({countryId}) => {
       <h1>Country Hero</h1>
       {/* <Card.Section>
           <Image
-            src={country.photoUrl}
+            src={country.photoUrl}  //countryChoice ???
             height={160}
             width={200}
-            alt={country.id}
+            alt={country.id}        //countryChoice ???
           />
         </Card.Section> */}
       {/* <Image src={countryChoice.photoUrl} height={160} width={200} alt={countryChoice.id} /> */}

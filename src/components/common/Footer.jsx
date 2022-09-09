@@ -1,13 +1,13 @@
-// import { Layout } from antd
-// import '../styles/Footer.css``'
+import { Layout } from "antd"; // I might use @mintina instead
+
+// import '../styles/Footer.css``' // Pending to add className to be used in CSS
 const Footer = () => {
     return (
-        // <Layout>
+        <Layout>
             <div style={{ textAlign: "center" }}>
                 Renzo Silva @2022 Your-o-planner
-                This is my footer, and I need to work on it soon!
             </div>
-        // </Layout>
+        </Layout>
     )
 }
  
