@@ -50,7 +50,7 @@ const CountryMain = ({ countryId }) => {
       <Modal
         opened={opened}
         onClose={() => setOpened(false)}
-        title="Introduce yourself!"
+        title="Check travelers' reviews! ✈️"
       >
         <ReviewsComponent />
       </Modal>

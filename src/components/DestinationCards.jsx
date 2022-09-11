@@ -5,31 +5,13 @@ import { DestinationsContext } from "../context/DestinationsContext";
 // import { useNavigate } from "react-router-dom";
 // import Form from "./AddReviewForm";
 
-// Button and link, so the user can drop a review.
-
 export default function DestinationCards({ place, setOpened, setOpenedAddReview }) {
   const { destination, setDestination } = useContext(DestinationsContext)
   const [destinationList, setDestinationList] = useState([]);
   
-  console.log({place})// I am not using it
+  console.log({place}) // I am not using it
   //   const { destination, setDestinations } = useContext(DescriptionsContext);
 
-  // const destinations = data.filter(
-  //   (dest) => dest.choiceDestination === choiceDestination
-  // );
-  //   setDestinations(destinations)
-  // })
-  //   .catch(console.error);
-  //   }, []);
-  //   const handleDestination = () => {
-  // todo navigate to destination page
-  //   };
-  //   const onClick = (id) => {
-  //     setDestinations(id);
-  //     console.log({ id });
-
-  //     navigate(`/country/${id}`);
-  //   };
   function handleAddReviewButton () {
     setOpenedAddReview(true)
     setDestination(place)
@@ -52,7 +34,6 @@ export default function DestinationCards({ place, setOpened, setOpenedAddReview 
         <Card
           shadow="sm"
           p="lg"
-          // onClick={() => onClick(destinations.id)}
           radius="md"
           withBorder
         >
@@ -71,10 +52,10 @@ export default function DestinationCards({ place, setOpened, setOpenedAddReview 
               Description
             </Badge>
           </Group>
-
-          <Text size="sm" color="dimmed">
+          <Text 
+          size="sm" color="dimmed">
             {" "}
-            {place.reviews}
+            {place.description}
           </Text>
 
           <Group position="center">

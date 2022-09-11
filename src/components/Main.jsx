@@ -1,6 +1,5 @@
 import { Container, Grid } from "@mantine/core";
 import { useEffect, useState } from "react";
-// Maybe country Cards instead of DestinationCards below.
 import CountryCards from "./CountryCards";
 
 const Main = () => {

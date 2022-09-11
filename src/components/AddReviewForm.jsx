@@ -8,33 +8,20 @@ const AddReviewForm = () => {  //{countryId}
 
     function addReview(e) {
         e.preventDefault()
-        const reviews = {review}
+        const reviews = { review }
+        // console.log(reviews)
         // useEffect(() => {
             // const result =
-            fetch(`https://deploy-api-your-o-planner.web.app/countries`, {mode: "no-cors"}, {
+            fetch(`https://deploy-api-your-o-planner.web.app/destination`, {mode: "no-cors"}, {
             method: 'POST',
-            headers: {"Content-Type": "application/json" },
-            body: JSON.stringify(addForm)
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(reviews)
         }).then(() => {
             console.log('New review added')
         })
         .catch(err => console.error(err));
-
-
-
-
-            // .then((test) => console.log(JSON.stringify(test)))
-        // }, [])
     }
-
-    // function handleSubmitReview(e) {
-    //     e.preventDefault()
-    //     addReview()
-    //     const reviews = {review}
-    //     console.log("reviews", reviews)
-    // }
-
-
+    
     return (
         <Card>
         <div className="form">
@@ -43,7 +30,7 @@ const AddReviewForm = () => {  //{countryId}
                 <br/>
                 <input name="person" onChange={(e) => {setAddForm({...addForm, person: e.target.value})}} type="text" required/>
                 <br/>
-                <label>Add your review</label>
+                <label>Add Review</label>
                 <br/>
                 <textarea name="review" onChange={(e) => {setAddForm({...addForm, review: e.target.value})}} required>
                 </textarea>

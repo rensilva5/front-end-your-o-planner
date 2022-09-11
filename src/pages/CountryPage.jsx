@@ -12,7 +12,6 @@ const CountryPage = () => {
     return ( 
         <div>
             <CountryHero countryId = {countryId}/>
-            {/* <DestinationCards /> */}
             <CountryMain countryId = {countryId}/>
         </div>
      )

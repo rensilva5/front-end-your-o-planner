@@ -75,6 +75,9 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: aliceblue;
 }
 
 .next-destination {
@@ -96,5 +99,4 @@ video {
   /* justify-items: center; */
   /* align-items: center; */
   /* image-orientation: from-image; */
-
 }
