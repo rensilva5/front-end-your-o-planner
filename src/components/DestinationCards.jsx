@@ -3,11 +3,11 @@ import { Badge, Button, Card, Group, Image, Modal, Text } from "@mantine/core";
 import { useContext, useState } from "react";
 import { DestinationsContext } from "../context/DestinationsContext";
 // import { useNavigate } from "react-router-dom";
-import Form from "./AddReviewForm";
+// import Form from "./AddReviewForm";
 
 // Button and link, so the user can drop a review.
 
-export default function DestinationCards({ place, setOpened }) {
+export default function DestinationCards({ place, setOpened, setOpenedAddReview }) {
   const { destination, setDestination } = useContext(DestinationsContext)
   const [destinationList, setDestinationList] = useState([]);
   
@@ -31,7 +31,7 @@ export default function DestinationCards({ place, setOpened }) {
   //     navigate(`/country/${id}`);
   //   };
   function handleAddReviewButton () {
-    setOpened(true)
+    setOpenedAddReview(true)
     setDestination(place)
 
   }
@@ -94,5 +94,3 @@ export default function DestinationCards({ place, setOpened }) {
     </>
   );
 }
-
-// Forms / controlled input

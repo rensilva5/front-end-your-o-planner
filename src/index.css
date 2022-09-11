@@ -82,3 +82,19 @@ video {
   justify-items: center;
   padding-left: 15px;
 }
+
+.form {
+  justify-content: center;
+  display: flex;
+}
+
+.country-hero-img {
+  display: flex;
+  /* padding: 0%, 20%, 0%, 20%; */
+  padding-left: 15ex;
+  /* justify-content: center; */
+  /* justify-items: center; */
+  /* align-items: center; */
+  /* image-orientation: from-image; */
+
+}

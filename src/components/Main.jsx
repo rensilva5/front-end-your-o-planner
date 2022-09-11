@@ -2,7 +2,6 @@ import { Container, Grid } from "@mantine/core";
 import { useEffect, useState } from "react";
 // Maybe country Cards instead of DestinationCards below.
 import CountryCards from "./CountryCards";
-// it also needs pictures of the countries.
 
 const Main = () => {
   const [countryList, setCountryList] = useState([]);
