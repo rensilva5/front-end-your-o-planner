@@ -12,7 +12,7 @@ const Main = () => {
   }, []);
   
   return (
-    <Container size="xs" px="xs" >
+    <Container size="md" px="md" >
     <Grid spacing="lg">
       {countryList.map((country, index) => (
         <Grid.Col span={4} key={index}>

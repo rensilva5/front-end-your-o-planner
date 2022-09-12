@@ -29,8 +29,8 @@ export default function CountryCards({ country }) {
         <Card.Section>
           <Image
             src={country.photoUrl}
-            height={160}
-            width={200}
+            height={200}
+            width={297}
             alt={country.id}
           />
         </Card.Section>
@@ -47,9 +47,9 @@ export default function CountryCards({ country }) {
           {country.description}
         </Text>
 
-        <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+        {/* <Button variant="light" color="blue" fullWidth mt="md" radius="md">
           Click Here
-        </Button>
+        </Button> */}
       </Card>
     </>
   );

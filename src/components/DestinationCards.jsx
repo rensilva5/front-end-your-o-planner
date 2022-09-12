@@ -60,13 +60,13 @@ export default function DestinationCards({ place, setOpened, setOpenedAddReview 
 
           <Group position="center">
             <Button onClick={handleAddReviewButton}variant="light" color="blue" fullWidth mt="md" radius="md">
-              Add a review<Button/>
+              Add a review
+            </Button>
               
               {/* <Modal
                 title="Add a review">
               <Form />
       </Modal> */}
-            </Button>
             <Button onClick={handleReviewButton}>Read Reviews</Button>
           </Group>
         </Card>
