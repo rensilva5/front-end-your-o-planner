@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Lato", arial, sans-serif;
+  /* font-family: "Lato", arial, sans-serif; */
   /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 }
 
@@ -55,8 +55,6 @@
   justify-content: space-between;
   /* flex-wrap: wrap; */
 }
-
-
 
 .navbar {
   display: flex;
@@ -120,13 +118,14 @@ video {
   padding-top: 0%;
   padding-bottom: 25%;
   width: 100%;
-  height: 100%;
+  height: 160%;
   top: 13%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
+  font-size: 25px;
 }
 
 .overlay {
@@ -149,7 +148,6 @@ video {
 .main-description > p {
   padding-top: 40px;
   padding-bottom: 15px;
-
   font-weight: 700;
 }
 
@@ -162,10 +160,24 @@ video {
   background-color: aliceblue;
 }
 
+.country-cards {
+  height: 500px;
+}
+
+.destination-cards {
+  /* height: 690px; */
+}
+
 .next-destination {
   align-content: center;
   justify-items: center;
   padding-left: 15px;
+}
+
+.country-title {
+  align-content: center;
+  justify-items: center;
+  padding-left: 29px;
 }
 
 .form {

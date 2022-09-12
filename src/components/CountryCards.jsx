@@ -18,8 +18,8 @@ export default function CountryCards({ country }) {
 
   return (
     <>
-      <h2>Select Country</h2>
-      <Card
+      <h2 className="country-title">Select Country</h2>
+      <Card className="country-cards"
         shadow="sm"
         p="lg"
         onClick={() => onClick(country.id)}
@@ -30,13 +30,14 @@ export default function CountryCards({ country }) {
           <Image
             src={country.photoUrl}
             height={200}
-            width={297}
+            width={296}
             alt={country.id}
           />
         </Card.Section>
 
-        <Group position="apart" mt="md" mb="xs">
+        <Group position="apart" mt="md" mb="md">
           <Text weight={500}>{country.id}</Text>
+
           <Badge color="pink" variant="light">
             Description
           </Badge>

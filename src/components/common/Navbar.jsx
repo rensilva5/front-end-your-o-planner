@@ -16,7 +16,7 @@ const Navbar = () => {
             <div className="container-fluid">
                 <div className="navbar-header">
                     <a className="navbar-brand" href="#">
-                        <img src={newlogo} width="50" height="50" />WebSiteName</a>
+                        <img src={newlogo} width="50" height="50" />EOP</a>
                 </div>
                 <ul className="nav navbar-nav">
                     <li className="active"><Link to="/">Home</Link></li>

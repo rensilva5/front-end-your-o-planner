@@ -1,16 +1,12 @@
 import { Badge, Button, Card, Group, Image, Modal, Text } from "@mantine/core";
-// import { DescriptionsContext } from "antd/lib/descriptions";
 import { useContext, useState } from "react";
 import { DestinationsContext } from "../context/DestinationsContext";
-// import { useNavigate } from "react-router-dom";
-// import Form from "./AddReviewForm";
 
 export default function DestinationCards({ place, setOpened, setOpenedAddReview }) {
   const { destination, setDestination } = useContext(DestinationsContext)
   const [destinationList, setDestinationList] = useState([]);
   
-  console.log({place}) // I am not using it
-  //   const { destination, setDestinations } = useContext(DescriptionsContext);
+  console.log({place})
 
   function handleAddReviewButton () {
     setOpenedAddReview(true)
@@ -37,7 +33,7 @@ export default function DestinationCards({ place, setOpened, setOpenedAddReview 
           radius="md"
           withBorder
         >
-          <Card.Section>
+          <Card.Section className="destination-cards">
             <Image
               src={place.photoUrl}
               height={160}
