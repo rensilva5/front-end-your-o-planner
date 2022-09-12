@@ -1,16 +1,19 @@
 import { Container, Grid } from "@mantine/core";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import DestinationCards from "./DestinationCards";
 import { Modal, Button, Group } from "@mantine/core";
 import ReviewsComponent from "./ReviewsComponent";
 import AddReviewForm from "./AddReviewForm";
+import { DestinationsContext } from "../context/DestinationsContext";
 
 const CountryMain = ({ countryId }) => {
+  const { addForm } = useContext(DestinationsContext);
   const [placeList, setPlaceList] = useState([]);
   const [opened, setOpened] = useState(false);
   const [openedAddReview, setOpenedAddReview] = useState(false)
 
   useEffect(() => {
+    // fetch(`https://deploy-api-your-o-planner.web.app/destinations`)
     fetch(`https://deploy-api-your-o-planner.web.app/destinations`)
       .then((result) => result.json())
       .then((data) => {
@@ -20,13 +23,13 @@ const CountryMain = ({ countryId }) => {
         setPlaceList(destinations);
       })
       .catch(console.error);
-  }, []);
+  }, [addForm]);
 
   return (
     <>
       <Container size="sm" px="sm">
         <Grid spacing="lg">
-          {placeList.map((place, index) => (
+          {placeList?.map((place, index) => (
             <Grid.Col span={4} key={index}>
 
               {/* check this */}

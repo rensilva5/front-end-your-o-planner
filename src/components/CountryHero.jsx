@@ -9,19 +9,8 @@ const CountryHero = ({countryId}) => {
   
   return (
     <>
-      <h1>Country Hero</h1>
-      {/* <Card.Section>
-          <Image
-            src={country.photoUrl}
-            src={countryChoice.photoUrl}
-            height={160}
-            width={200}
-            alt={country.id}
-            alt={countryChoice.id}
-            
-          />
-        </Card.Section>
-      <Image src={countryChoice.photoUrl} height={160} width={200} alt={countryChoice.id} /> */}
+      <h1>{countryId || 'Country'}</h1>
+      {/* <Image src={countryChoice.photoUrl} height={160} width={200} alt={countryChoice.id} /> */}
     </>
   );
 };

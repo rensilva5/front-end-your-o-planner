@@ -3,28 +3,28 @@ import { useContext, useEffect, useState } from "react";
 import { DestinationsContext } from "../context/DestinationsContext";
 
 const AddReviewForm = () => {
-  const { destination, setDestination } = useContext(DestinationsContext);
+  const { destination, setDestination, addForm, setAddForm } = useContext(DestinationsContext);
   console.log(destination.reviews);
 
   const [name, setName] = useState("");
   const [review, setReview] = useState("");
-  const [addForm, setAddForm] = useState({});
+  // const [addForm, setAddForm] = useState({});  
 
   function addReview(e) {
-    e.preventDefault();
+    e.preventDefault(); 
     const reviews = [...destination.reviews, addForm];
     const destinationId = destination.id;
     // console.log(reviews)
     // useEffect(() => {
     // const result =
     // fetch(`https://deploy-api-your-o-planner.web.app/destination/${destinationId}`, {
-    fetch(`http://localhost:5556/destination/${destinationId}`, {
+    fetch(`https://deploy-api-your-o-planner.web.app/destination/${destinationId}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(reviews),
     })
       .then(() => {
-        console.log("New review added");
+        alert("New review added");
       })
       .catch((err) => console.error(err));
   }
