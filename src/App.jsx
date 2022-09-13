@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage.jsx";
 import About from "./components/About.jsx";
 // import DestinationPage from './pages/DestinationPage.jsx';
 import CountryPage from "./pages/CountryPage.jsx";
-import "antd/dist/antd.css";
+// import "antd/dist/antd.css";
 import "./App.css";
 import Navbar from "./components/common/Navbar.jsx";
 import Footer from "./components/common/Footer.jsx";

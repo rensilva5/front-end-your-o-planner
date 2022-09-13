@@ -1,0 +1,11 @@
+.destination-cards {
+    height: 650px;
+  }
+  
+  .card-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center
+  }

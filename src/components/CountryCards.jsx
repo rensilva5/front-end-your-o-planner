@@ -2,6 +2,7 @@ import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { TravelerChoiceContext } from "../context/TravelerChoiceContext";
+import './CountryCards.css'
 
 //-//Products
 
@@ -35,7 +36,7 @@ export default function CountryCards({ country }) {
           />
         </Card.Section>
 
-        <Group position="apart" mt="md" mb="md">
+        <Group className="card-group" mt="md" mb="md" >
           <Text weight={500}>{country.id}</Text>
 
           <Badge color="pink" variant="light">
