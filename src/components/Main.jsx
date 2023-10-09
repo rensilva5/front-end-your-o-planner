@@ -5,7 +5,6 @@ import CountryCards from "./CountryCards";
 const Main = () => {
   const [countryList, setCountryList] = useState([]);
   useEffect(() => {
-    // fetch("https://deploy-api-your-o-planner.web.app/countries")
     fetch("https://deploy-api-your-o-planner.web.app/countries")
       .then((result) => result.json())
       .then((data) => setCountryList(data))

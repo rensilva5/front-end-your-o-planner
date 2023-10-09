@@ -10,7 +10,7 @@ const CountryMain = ({ countryId }) => {
   const { addForm } = useContext(DestinationsContext);
   const [placeList, setPlaceList] = useState([]);
   const [opened, setOpened] = useState(false);
-  const [openedAddReview, setOpenedAddReview] = useState(false)
+  const [openedAddReview, setOpenedAddReview] = useState(false);
 
   useEffect(() => {
     // fetch(`https://deploy-api-your-o-planner.web.app/destinations`)
@@ -31,23 +31,26 @@ const CountryMain = ({ countryId }) => {
         <Grid spacing="lg">
           {placeList?.map((place, index) => (
             <Grid.Col span={4} key={index}>
-
               {/* check this */}
 
               {/* <DestinationCards place={place} setOpened={setOpened}  /> */}
-              <DestinationCards place={place} setOpened={setOpened} setOpenedAddReview={setOpenedAddReview} />
+              <DestinationCards
+                place={place}
+                setOpened={setOpened}
+                setOpenedAddReview={setOpenedAddReview}
+              />
               {/* <DestinationCards place={place} openedAddReviewsetOpened={openedAddReview}  /> */}
             </Grid.Col>
           ))}
         </Grid>
       </Container>
 
-     <Modal
+      <Modal
         opened={openedAddReview}
         onClose={() => setOpenedAddReview(false)}
         title="Add a review"
       >
-        <AddReviewForm countryId={countryId}/>
+        <AddReviewForm countryId={countryId} />
       </Modal>
 
       <Modal
@@ -57,7 +60,6 @@ const CountryMain = ({ countryId }) => {
       >
         <ReviewsComponent />
       </Modal>
-
     </>
   );
   //     const { destinations, setDestinations } = useContext(DescriptionsContext);
