@@ -13,7 +13,6 @@ const CountryMain = ({ countryId }) => {
   const [openedAddReview, setOpenedAddReview] = useState(false);
 
   useEffect(() => {
-    // fetch(`https://deploy-api-your-o-planner.web.app/destinations`)
     fetch(`https://deploy-api-your-o-planner.web.app/destinations`)
       .then((result) => result.json())
       .then((data) => {
@@ -23,7 +22,7 @@ const CountryMain = ({ countryId }) => {
         setPlaceList(destinations);
       })
       .catch(console.error);
-  }, [addForm]);
+  }, [addForm, countryId]);
 
   return (
     <>

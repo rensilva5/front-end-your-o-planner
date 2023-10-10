@@ -1,32 +1,45 @@
-import { Container } from "@mantine/core";
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import newlogo from "../../assets/newlogo.png"
+import newlogo from "../../assets/newlogo.png";
+import "./Navbar.css";
 
 const Navbar = () => {
-    return (
-        <>
-            <div className="top-bar">
-                <h5 className="head-title">
-            YOUR-O-PLANNER
-                </h5>
-                <h5 className="contact-number">+1 561-900-9999</h5>
+  return (
+    <div className="navbar-container">
+      <Container>
+        <Row className="align-items-center">
+          <Col md={4}>
+            <div className="navbar-header">
+              <a className="navbar-brand" href="/">
+                <img src={newlogo} width="50" height="50" alt="Logo" />
+              </a>
+              <h5 className="head-title">YOUR-O-PLANNER</h5>
             </div>
-        <Container className="header">
-        <nav className="navbar navbar-default">
-            <div className="container-fluid">
-                <div className="navbar-header">
-                    <a className="navbar-brand" href="#">
-                        <img src={newlogo} width="50" height="50" />EOP</a>
-                </div>
-                <ul className="nav navbar-nav">
-                    <li className="active"><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                </ul>
+          </Col>
+          <Col md={4} className="text-center">
+            <ul className="nav">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">
+                  About
+                </Link>
+              </li>
+            </ul>
+          </Col>
+          <Col md={4} className="text-right">
+            <div className="contact-number">
+              <h5>+1 561-900-****</h5>
             </div>
-        </nav>
-        </Container>
-        </>
-    )
-}
- 
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
+};
+
 export default Navbar;

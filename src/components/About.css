@@ -1,0 +1,53 @@
+/* About.css */
+.about-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.about-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #4890ff;
+}
+
+.about-subtitle {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: aliceblue;
+  justify-content: center;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+/* Center the image and text vertically and horizontally */
+.image-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+/* Style for the centered image */
+.centered-image {
+  width: 60%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Style for the heading */
+.about-title {
+  font-size: 28px;
+  font-weight: bold;
+}
