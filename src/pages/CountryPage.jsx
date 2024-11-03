@@ -1,7 +1,3 @@
-// I am grabbing CountryHero, and I need to get the img from
-// my country collection to be displayed on Hero.
-// DestinationCards should contains collection destination from my data
-
 import CountryHero from "../components/CountryHero";
 import CountryMain from "../components/CountryMain";
 import { useParams } from "react-router-dom";
@@ -9,6 +5,7 @@ import DestinationCards from "../components/DestinationCards";
 
 const CountryPage = () => {
   const { countryId } = useParams();
+
   return (
     <div>
       <CountryHero countryId={countryId} />

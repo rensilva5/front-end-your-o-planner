@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Layout>
       <div style={{ textAlign: "center", margin: "2rem" }}>
-        Renzo Silva @2023 Your-o-planner
+        renzosilva.net @2024 YourOPlanner
       </div>
     </Layout>
   );

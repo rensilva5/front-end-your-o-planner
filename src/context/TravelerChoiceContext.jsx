@@ -3,13 +3,16 @@ import { createContext, useState } from "react";
 export const TravelerChoiceContext = createContext();
 
 export function TravelerChoiceContextProvider({ children }) {
-  const { Provider } = TravelerChoiceContext;
-  const [countryChoice, setCountryChoice] = useState();
+  const [countryChoice, setCountryChoice] = useState(null); // Initialize state with a default value
 
   const value = {
     countryChoice,
     setCountryChoice,
-    
   };
-  return <Provider value={value}>{children}</Provider>;
+
+  return (
+    <TravelerChoiceContext.Provider value={value}>
+      {children}
+    </TravelerChoiceContext.Provider>
+  );
 }

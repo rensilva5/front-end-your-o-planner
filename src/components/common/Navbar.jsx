@@ -14,7 +14,7 @@ const Navbar = () => {
               <a className="navbar-brand" href="/">
                 <img src={newlogo} width="50" height="50" alt="Logo" />
               </a>
-              <h5 className="head-title">YOUR-O-PLANNER</h5>
+              <h5 className="head-title">YOP</h5>
             </div>
           </Col>
           <Col md={4} className="text-center">

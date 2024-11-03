@@ -1,22 +1,27 @@
 import { useParams } from "react-router-dom";
-// This Page will have destination places with pictures,
-// description or summary, and a review button.
 import DestinationCards from "../components/DestinationCards";
-const DestinationPage = () => {
+
+const DestinationPage = ({ places }) => {
   const { destinationId } = useParams();
+
+  // Safely access destination places, assuming places[destinationId] is an array.
+  const destinationPlaces = places[destinationId] || [];
+
   return (
-    <>
-      <div className="destination-place">
-        <h2> destination Page {destinationId}</h2>
+    <div className="destination-place">
+      <h2>Destination Page {destinationId}</h2>
+      {destinationPlaces.length > 0 ? (
         <ul>
-          {destinationId.map((place, index) => (
-            <ul key={index}>
+          {destinationPlaces.map((place) => (
+            <li key={place.id || place.name}>
               <DestinationCards place={place} />
-            </ul>
+            </li>
           ))}
         </ul>
-      </div>
-    </>
+      ) : (
+        <p>No destinations found for this ID.</p>
+      )}
+    </div>
   );
 };
 
